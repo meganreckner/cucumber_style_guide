@@ -26,13 +26,4 @@ A feature should be clearly defined and focused. If you are attempting to accomp
 * Increases ease of maintaining feature sets
 
 #### Frame features in terms of their value to users
-
-
-    Feature: Select subscription level
-      As a customer
-      I want to be able to select a subscription level
-      so that I can purchase it
-
-
-#### Use Background to set up 
-Background is a special type of scenario. Data setup?
+Features are intended to add value from a user standpoint. If the feature doesn't add value to users, it may need to be reevaluated.
