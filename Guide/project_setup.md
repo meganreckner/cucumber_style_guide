@@ -24,7 +24,7 @@ If you run a subset of the test suite, you will need to include the Features fol
 
 ## Step Definition Files
 #### Group step definitions in multiple files
-Step definition files should be grouped in a way that makes sense in the context of your particular business model or application. Suggested groupings include: by model.
+Step definition files should be grouped in a way that makes sense in the context of your particular business model or application. Suggested groupings include: by model or by domain objects (user, account, device, etc.).
 
 * Provides a built-in guide for where to add or find steps
 * Makes nesting related steps, and finding related step definitions, easier
