@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [Project Setup](/project_setup.md)
-* [Features](/features.md)
-* [Scenarios](/scenarios.md)
-* [Steps](/steps.md)
-* [Step Definitions](/step_definitions.md)
+* [Project Setup](/Guide/project_setup.md)
+* [Features](/Guide/features.md)
+* [Scenarios](/Guide/scenarios.md)
+* [Steps](/Guide/steps.md)
+* [Step Definitions](/Guide/step_definitions.md)
