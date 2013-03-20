@@ -38,6 +38,9 @@ Steps are meant to be reusable; organizing them by feature is an anti-pattern.
 #### Do not use web_steps.rb
 As of Cucumber-Rails 1.1.0, the `web_steps.rb` file has been removed and deprecated. Steps should be defined in custom step definition files.
 
+#### Do not write steps like those found in web_steps.rb
+`web_steps.rb` was removed because its steps often lead to brittle and unmaintanable features. Do not effectively re-create `web_steps.rb` by writing steps that only click buttons or do textual checks.
+
 ## Tags
 #### Classify non-functional features and scenarios with tags
 Tags should be used in conjunction with your feature definition file organizational scheme.
