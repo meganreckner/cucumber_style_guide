@@ -2,7 +2,7 @@
 These guidelines cover best practices for structuring Cucumber steps.
 
 ## Format
-Steps are defined using statements beginning with the Given/When/Then keywords.
+A Step is an individual action taken in a Scenario. Steps are defined using statements beginning with the Given/When/Then keywords.
 
 **Given**  
 Describes the initial state of the scenario being tested. It should not be used to perform any actions on the system.
@@ -42,13 +42,15 @@ It can be rewritten to capture the system's action instead:
     Then my profile picture is displayed
 
 
-The `And` keyword can also be used to add an additional conditions to a Given/When/Then statement.
+The `And` and `But` keywords can also be used to add additional conditions to a Given/When/Then statement or make it more clear.
 
     Given I am a user
     And I am logged in
     When I view my profile page
     And I have a picture uploaded
+    But do not have a nickname set
     Then my picture is displayed
+    And a nickname is not.
 
 
 ## General Guidelines
@@ -64,14 +66,14 @@ Reference pages, views, and other app components using the same terminology in a
 * Reduces confusion among step descriptions across features
 * Keeps technical and non-technical members of the team on the same page
 
+#### Use descriptive steps
+Steps should describe how the application progresses, not how it is implemented. `Then I log in` is a good step, `Then I click the login button` is not.
+
+* Decouples functionality from user interface elements
+* Prevents steps from having to be rewritten when user experience changes, but functionality does not
+
 #### Do not use any kind of code or data structures in step descriptions
 Steps should be written in plain text, without any implementation references.
 
 * Provides readability across a variety of audiences, technical and non-technical alike
 * Prevents steps from having to be rewritten when implementation details change
-
-#### Do not reference UI elements in step descriptions
-Steps should not contain hardcoded UI elements, such as buttons, links, and form fields. They should not need to be changed just because the implementation changes.
-
-* Decouples functionality from user interface elements
-* Prevents steps from having to be rewritten when user experience changes, but functionality does not

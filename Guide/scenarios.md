@@ -2,7 +2,7 @@
 These guidelines cover best practices for structuring Cucumber scenarios.
 
 ## Format
-Scenarios describe the acceptance criteria for a given feature. They are defined using a series of Given/When/Then statements.
+Scenarios describe the acceptance criteria for a given feature. They are made of steps defined using a series of Given/When/Then statements.
 
 The first line of a scenario starts with the `Scenario` keyword, followed by a brief description of the scenario to be tested. It is followed by a series of Given/When/Then/And statements that describe what should happen in the scenario for it to be considered "passing."
 
@@ -21,7 +21,14 @@ See the example below; the feature definition is included to provide context.
 
 
 #### Use Background to set up scenarios
-The background scenario is run before each individual scenario in the feature file. It is a special type of scenario used to prepare the environment for the scenarios to be run. Rather than copying setup steps on a per-scenario basis, pull common steps applicable to all scenarios into the background.
+The `Background` scenario is run before each individual scenario in the feature file. It is a special type of scenario used to prepare the environment for the scenarios to be run. Rather than copying setup steps on a per-scenario basis, pull common steps applicable to all scenarios into the background.
+
+A background example that creates a user and logs the user into the site:
+
+    Background:
+        Given I am a user
+        Then I should be able to log into the site
+        And see my view
 
 #### Use Scenario Outline to define functionality with multiple data points
 Scenario Outlines allow one feature to be defined, but tested using multiple data points. The functionality behind the feature doesn't change, but expected outcomes vary depending on the given inputs.
